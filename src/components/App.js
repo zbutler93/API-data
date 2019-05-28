@@ -5,6 +5,7 @@ class App extends Component {
         return /*html*/`
             <div>
                 <header>
+                    <img src="../assets/elements.png">
                     <h1>
                         Avatar
                     </h1>
