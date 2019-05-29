@@ -4,6 +4,10 @@ class AvatarItem extends Component {
     
     renderTemplate() {
         const character = this.props.character;
+        if(!character.photoUrl) {
+            character.photoUrl = '../../assets/elements.png';
+        }
+
         return /*html*/`
             <li class="avatar-item">
                 <h2>${character.name}</h2>
