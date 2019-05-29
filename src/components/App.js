@@ -1,6 +1,7 @@
 import Component from './Component.js';
 import AvatarList from './AvatarList.js';
 import Header from './Header.js';
+import avatarApi from '../services/avatar-api.js';
 
 class App extends Component {
 
@@ -11,8 +12,13 @@ class App extends Component {
         const header = new Header();
         dom.insertBefore(header.render(), main);
 
-        const avatarList = new AvatarList();
+        const avatarList = new AvatarList({ characters: [] });
         main.appendChild(avatarList.render());
+
+        avatarApi.getCharacters()
+            .then(characters => {
+                avatarList.update({ characters });
+            });
 
         return dom;
     }

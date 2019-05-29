@@ -6,8 +6,10 @@ class AvatarList extends Component {
     render() {
         const list = this.renderDOM();
 
-        const avatarItem = new AvatarItem();
-        list.appendChild(avatarItem.render());
+        this.props.characters.forEach(character => {
+            const avatarItem = new AvatarItem({ character });
+            list.appendChild(avatarItem.render());
+        });
         
         return list;
     }
