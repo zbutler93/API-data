@@ -6,5 +6,23 @@
 }
 
 .avatar-item img {
+    display: block;
     height: 250px;
 }
+
+a {
+    margin: 10px;
+}
+
+a:link, a:visited {
+    background-color: rgb(190, 236, 169);
+    color: black;
+    padding: 10px 20px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: white;
+  }
