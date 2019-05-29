@@ -1,11 +1,15 @@
 import Component from './Component.js';
 import AvatarList from './AvatarList.js';
+import Header from './Header.js';
 
 class App extends Component {
 
     render() {
         const dom = this.renderDOM();
         const main = dom.querySelector('main');
+
+        const header = new Header();
+        dom.insertBefore(header.render(), main);
 
         const avatarList = new AvatarList();
         main.appendChild(avatarList.render());
@@ -16,15 +20,7 @@ class App extends Component {
     renderTemplate() {
         return /*html*/`
             <div>
-                <header>
-                    <img src="../assets/elements.png">
-                    <h1>
-                        Avatar
-                    </h1>
-                </header>
-
-                <main>
-                    
+                <main> 
                 </main>
             </div>
         `;
