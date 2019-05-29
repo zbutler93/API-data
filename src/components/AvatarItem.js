@@ -1,6 +1,7 @@
 import Component from './Component.js';
 
 class AvatarItem extends Component {
+    
     renderTemplate() {
         const character = this.props.character;
         if(!character.photoUrl) {
