@@ -20,11 +20,8 @@ class App extends Component {
         main.appendChild(loading.render());
         
         const params = window.location.search;
-        console.log(params);
         const searchParams = new URLSearchParams(params);
-        
         const search = searchParams.toString();
-        console.log(search);
         
         avatarApi.getCharacters(search)
             .then(characters => {
