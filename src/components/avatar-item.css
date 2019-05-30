@@ -3,11 +3,17 @@
     text-align: center;
     box-shadow: 5px 5px 5px lightgray;
     margin: 0 10px 10px 0;
+    width: 450px;
 }
 
 .avatar-item img {
     display: block;
-    height: 250px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+
+    /* height: 250px; */
+    margin: auto;
 }
 
 a {
