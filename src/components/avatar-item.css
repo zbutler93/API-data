@@ -11,7 +11,7 @@
 }
 
 a {
-    margin: 10px;
+    margin: 10px 0 0 0;
 }
 
 a:link, a:visited {
@@ -21,8 +21,10 @@ a:link, a:visited {
     text-align: center; 
     text-decoration: none;
     display: inline-block;
+    transition: .3s;
   }
   
   a:hover, a:active {
     background-color: white;
-  }
+    transition: .3s;
+}
