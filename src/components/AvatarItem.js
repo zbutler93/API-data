@@ -13,8 +13,8 @@ class AvatarItem extends Component {
             <li class="avatar-item">
                 <h2>${character.name}</h2>
                 <img src="${character.photoUrl}" alt="${character.name}">
-                <a href=?allies=${character.name}>allies</a>
-                <a href=?enemies=${character.name}>enemies</a>
+                <a href=#allies=${character.name}>allies</a>
+                <a href=#enemies=${character.name}>enemies</a>
             </li>
         `;
     }
