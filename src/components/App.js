@@ -19,17 +19,25 @@ class App extends Component {
         const loading = new Loading({ loading: true });
         main.appendChild(loading.render());
         
-        const params = window.location.search;
-        const searchParams = new URLSearchParams(params);
-        const search = searchParams.toString();
-        
-        avatarApi.getCharacters(search)
-            .then(characters => {
-                avatarList.update({ characters });
-            })
-            .finally(() => {
-                loading.update({ loading: false });
-            });
+        function loadCharacters() {
+            const params = window.location.hash.slice(1);
+            const searchParams = new URLSearchParams(params);
+            const search = searchParams.toString();
+            
+            avatarApi.getCharacters(search)
+                .then(characters => {
+                    avatarList.update({ characters });
+                })
+                .finally(() => {
+                    loading.update({ loading: false });
+                });
+        }
+
+        loadCharacters();
+
+        window.addEventListener('hashchange', () => {
+            loadCharacters();
+        });
 
         return dom;
     }
