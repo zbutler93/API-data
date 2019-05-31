@@ -31,7 +31,7 @@ class Search extends Component {
 
     renderTemplate() {
         return /*html*/`
-            <form>
+            <form class="search-form">
                 <input name="name">
                 <button>🔍</button>
             </form>
