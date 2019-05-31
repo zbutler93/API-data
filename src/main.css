@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+
+body {
+    font-family: 'Comfortaa', cursive;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+header a {
+    width: 100px;
+    margin: auto;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30vw;
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+}
+
+header img {
+    height: 100px;
+}
